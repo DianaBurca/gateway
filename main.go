@@ -10,6 +10,8 @@ func main() {
 	driver := gin.Default()
 
 	driver.GET("/info", utils.InfoHandler)
+	driver.GET("/.well-known/live", utils.Health)
+	driver.GET("/.well-known/ready", utils.Health)
 
 	driver.Run()
 

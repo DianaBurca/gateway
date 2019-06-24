@@ -58,3 +58,8 @@ func InfoHandler(c *gin.Context) {
 	}
 	defer resp.Body.Close()
 }
+
+// Health ...
+func Health(c *gin.Context) {
+	c.Status(http.StatusOK)
+}
